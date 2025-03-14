@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body></body>
+</html>
+
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyetësor</title>
+    <link rel="stylesheet" href="formulari.css">
+</head>
+<body>
+    <div class="container">
+        <h2>PYETËSOR</h2>
+        <form>
+            <label for="emri"><strong>1. Emri dhe Mbiemri</strong></label>
+            <input type="text" id="emri" name="emri" placeholder="Shkruani emrin tuaj..." required>
+
+            <label><strong>2. Cili është profesioni/profesionet që të tërheq më shumë?</strong></label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="profesioni" value="Mjek"> Mjek</label>
+                <label><input type="checkbox"" name="profesioni" value="Inxhinier"> Inxhinier</label>
+                <label><input type="checkbox" name="profesioni" value="Programues"> Programues</label>
+                <label><input type="checkbox" name="profesioni" value="Ekonomist"> Ekonomist</label>
+                <label><input type="checkbox" name="profesioni" value="Arkitekt"> Arkitekt</label>
+                <label><input type="checkbox" name="profesioni" value="Mesues"> Mësues</label>
+                <label><input type="checkbox" name="profesioni" value="Tjeter"> Tjeter</label>
+            
+            </div>
+
+            <label><strong>3. A mendon se Inteligjenca Artificiale (AI) do të ketë ndikim në këtë profesion?</strong></label>
+            <select name="ndikimi_ai">
+                <option value="shume">Po, shumë</option>
+                <option value="pak">Po, pak</option>
+                <option value="fare">Jo, fare</option>
+                <option value="nuk_di">Nuk jam i sigurt</option>
+            </select>
+
+            <label><strong>Si e vlerëson ndikimin e AI në këtë profesion?</strong> </label>
+            <div class="checkbox-group">
+                <label><input type="radio" name="vleresim_ai" value="pozitiv"> Pozitiv – Mund të ndihmojë dhe përmirësojë punën</label>
+                <label><input type="radio" name="vleresim_ai" value="neutral"> Neutral – Nuk do të ndryshojë shumë gjëra</label>
+                <label><input type="radio" name="vleresim_ai" value="negativ"> Negativ – Mund të rrezikojë vendet e punës</label>
+            </div>
+
+            <label><strong> 5. Sa i sigurt do të ndiheshe nëse AI përdoret në këtë profesion?</strong> </label>
+            <select name="siguria">
+                <option value="shume">Shumë i sigurt</option>
+                <option value="mesatar">Mesatarisht i sigurt</option>
+                <option value="pak">Pak i sigurt</option>
+                <option value="aspak">Aspak i sigurt</option>
+            </select>
+
+            <label for="komente"><strong> 6. Cilat janë shqetësimet ose avantazhet që mendon se AI do të sjellë në këtë profesion?<strong> </label>
+            <textarea id="komente" name="komente" rows="4" placeholder="Shkruani përgjigjen tuaj..."></textarea>
+
+            <button type="submit">Dërgo</button>
+        
+        </form>
+    </div>
+</body>
+</html>

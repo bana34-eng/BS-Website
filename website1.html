@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJEKT</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <nav>
+            <h2>Ndikimi i Inteligjencës Artificiale</h2>
+            <ul>
+                <li><button class="menu-btn" data-content="content">Arkitekturë</button></li>
+                <li><button class="menu-btn" data-content="content1">IT/Teknologji</button></li> 
+                <li><button class="menu-btn" data-content="content2">Edukimi</button></li>
+                <li><button class="menu-btn" data-content="content3">Financë</button></li>
+                <li><button class="menu-btn" data-content="content4">Mjekësi</button></li>       
+                <li><button class="menu-btn" data-content="content6">Përmbledhje</button></li>
+                <li><button class="menu-btn" data-content="content5">Formularë</button></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="content">
+        <div class="info-box">
+            <h1>Mirësevini ne Website-in tonë!</h1>
+        </div>
+    </div>
+
+    <script>
+  const buttons = document.querySelectorAll('.menu-btn');
+const contentBox = document.querySelector('.info-box');
+const contentDiv = document.querySelector('.content');  // The content div where the background image will be changed
+
+const contentData = {
+    "content": {
+        "content": `<h2>Arkitekturë</h2>
+                    <p>Disiplina që merret me projektimin dhe krijimin e ndërtesave...</p>
+                    <a href="grupi1.html"><button id="readMoreBtn" class="read-more">Lexo më shumë</button></a>`,
+        "background-image": "url('images/ai-generated-8561123_1920.jpg')"  // Make sure the file exists
+    },
+    "content1": {
+        "content": `<h2>IT / Teknologji</h2>
+                    <p>Inteligjenca Artificiale ndikon në zhvillimin e teknologjisë...</p>
+                    <a href="grupi2.html"><button id="readMoreBtn" class="read-more">Lexo më shumë</button></a>`,
+        "background-image": "url('images/technology.jpg')"  // Ensure the path is correct
+    },
+    "content2": {
+        "content": `<h2>Edukimi</h2>
+                    <p>Ndikimi i AI në edukim është rritja e personalizimit të mësimit...</p>
+                    <a href="grupi3.html"><button id="readMoreBtn" class="read-more">Lexo më shumë</button></a>`,
+        "background-image": "url('images/edukimi.jpg')"  // Ensure the path is correct
+    },
+    "content3": {
+        "content": `<h2>Financë</h2>
+                    <p>AI ndihmon në analizimin e tregjeve financiare dhe menaxhimin e rreziqeve...</p>
+                    <a href="grupi4.html"><button id="readMoreBtn" class="read-more">Lexo më shumë</button></a>`,
+        "background-image": "url('images/economy.jpg')" 
+    },
+    "content4": {
+        "content": `<h2>Mjekësi</h2>
+                    <p>AI përdoret për diagnoza më të sakta dhe për përmirësimin e trajtimeve...</p>
+                    <a href="grupi5.html"><button id="readMoreBtn" class="read-more">Lexo më shumë</button></a>`,
+        "background-image": "url('images/doctore.jpg')" 
+    },
+    "content5": {
+        "content": `<h2>Formularë</h2>
+                    <p>Plotësoni formularët tuaj këtu.</p>
+                    <a href='formulari.html'><button id="readMoreBtn" class="read-more">Formulari</button></a>`,
+        "background-image": "url('images/formular-bg.jpg')"  
+    },
+    "content6": {
+    "content": `<h2>Përmbledhje</h2>
+                <p>Kjo është një përmbledhje e të gjitha ndikimeve të AI në fusha të ndryshme:<br>Sfidat që na sjellë AI në të ardhmen:</p>
+                <ol>
+                <li>Ulja e numrit te profesionisteve</li>
+                <li>Ndikimi ne ekonomine familjare</li>
+                <li>Rregullimi i pergjegjesise ligjore</li>
+                <li>Ndryshimi i mentaliteteve</li>
+                </ol>
+                <h1>Konkluzioni</h1>
+                <p>IA ka te mirat dhe te keqijat e saj, ndikimi i tij ne jeten tone eshte shume i gjere. E ardhmja jone gjendet padyshim ne duart tona dhe mund te behet akoma me e ndritur fale bashkepunimit njeri-teknologji. IA nuk eshte nje armik, por nje element qe ka nevoje te mire menaxhohet per nje fryt sa me pozitiv. Trajtojeni si te tille!</p>`,
+    "background-image": "url('path/to/your/custom/image.jpg')"
+}
+
+};
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const contentKey = button.getAttribute('data-content');
+       
+        contentBox.innerHTML = contentData[contentKey].content;
+        contentBox.classList.add('show');
+       
+        contentDiv.style.backgroundImage = contentData[contentKey]["background-image"];
+   
+        contentDiv.classList.remove('content-arkitekture', 'content-it', 'content-edukimi', 'content-finance', 'content-mjekesi', 'permbledhje');
+        
+        if (contentKey === 'content') {
+            contentDiv.classList.add('content-arkitekture');
+        } else if (contentKey === 'content1') {
+            contentDiv.classList.add('content-it');
+        } else if (contentKey === 'content2') {
+            contentDiv.classList.add('content-edukimi');
+        } else if (contentKey === 'content3') {
+            contentDiv.classList.add('content-finance');
+        } else if (contentKey === 'content4') {
+            contentDiv.classList.add('content-mjekesi');
+        } else if (contentKey === 'content6') {
+            contentDiv.classList.add('permbledhje');
+        }
+    });
+});
+
+    </script> 
+</body>
+</html>
